@@ -15,7 +15,7 @@
 
       <v-card-text> Greyhound divisively hello coldly wonderfully marginally far upon... </v-card-text>
 
-      <v-card-actions>
+      <v-card-actions class="mt-0 pt-0">
         <v-btn color="primary" text href="#"> View Info </v-btn>
       </v-card-actions>
     </v-card>

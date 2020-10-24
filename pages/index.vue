@@ -6,7 +6,11 @@
           <v-col cols="8">
             <div class="txt-header">Need someone to cook for you?</div>
             <div class="txt-header">Want to learn the secret cusinies?</div>
-            <v-card class="pa-5 mt-5">
+          </v-col>
+        </v-row>
+        <v-row align="center" justify="start">
+          <v-col cols="6">
+            <v-card class="pa-5 mt-5 rounded-0">
               <div class="mb-3 search-bar-header">Enter your postcode to find local Chefs</div>
               <div class="d-flex align-center">
                 <v-text-field
@@ -18,7 +22,7 @@
                   solo
                   flat
                 ></v-text-field>
-                <v-btn color="primary" href="#">Search</v-btn>
+                <v-btn color="primary" class="postal-search" href="#">Search</v-btn>
               </div>
             </v-card>
           </v-col>

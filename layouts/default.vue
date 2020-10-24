@@ -84,19 +84,32 @@ export default {
 
 .v-btn {
   border-radius: 2px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 12px !important;
   line-height: 12px;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
+  height: 32px !important;
+
+  &.postal-search {
+    padding: 21px 50px !important;
+    // font-family: 'Cera Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.0357143em;
+    text-transform: uppercase;
+  }
 }
 
 .txt-header {
-  font-family: Cormorant;
+  font-family: 'Cormorant';
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -104,7 +117,7 @@ export default {
 }
 
 h1 {
-  font-family: Cormorant;
+  font-family: 'Cormorant';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -126,7 +139,7 @@ h1 {
 }
 
 .search-bar-header {
-  font-family: Cormorant;
+  font-family: 'Cormorant';
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -135,17 +148,18 @@ h1 {
 }
 
 .card-title {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
 }
 .card-author {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+  color: rgba(0, 0, 0, 0.87);
 }
 </style>
