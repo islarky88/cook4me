@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+  <v-app dark>
+    <!-- <v-navigation-drawer v-model="drawer" app>
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-item-action>
@@ -11,7 +11,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -30,9 +30,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-main>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
@@ -77,3 +75,40 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+.v-main {
+  background-color: #eeede8;
+}
+
+.txt-header {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h1 {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  padding-left: 80px;
+
+  &.header-breakfast {
+    background-image: url('/images/icons/header/breakfast.svg');
+  }
+  &.header-lunch {
+    background-image: url('/images/icons/header/lunch.svg');
+  }
+  &.header-dinner {
+    background-image: url('/images/icons/header/dinner.svg');
+  }
+  &.header-brunch {
+    background-image: url('/images/icons/header/brunch.svg');
+  }
+}
+</style>
