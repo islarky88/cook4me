@@ -13,15 +13,7 @@
             <v-card class="py-5 px-8 mt-5 rounded-0">
               <div class="mb-3 search-bar-header">Enter your postcode to find local Chefs</div>
               <div class="d-flex align-center">
-                <v-text-field
-                  v-model="first"
-                  class="pr-5"
-                  placeholder="e.g. EC4R 3TE"
-                  background-color="#F7F7F7"
-                  hide-details
-                  solo
-                  flat
-                ></v-text-field>
+                <v-text-field class="pr-5" placeholder="e.g. EC4R 3TE" background-color="#F7F7F7" hide-details solo flat></v-text-field>
                 <v-btn color="primary" class="postal-search" href="#">Search</v-btn>
               </div>
             </v-card>
@@ -31,7 +23,7 @@
     </v-parallax>
     <v-container>
       <div v-for="(item, i) in menuCategories" :key="i">
-        <div class="d-flex justify-space-between">
+        <div class="d-flex justify-space-between align-center">
           <h1 :class="'header-' + item.class">{{ item.title }}</h1>
           <v-btn color="primary" href="#">View More</v-btn>
         </div>

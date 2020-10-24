@@ -118,12 +118,14 @@ export default {
 }
 
 h1 {
+  height: 70px;
   font-family: 'Cormorant';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
-  line-height: 39px;
+  line-height: 70px;
   padding-left: 80px;
+  background-position: center left;
 
   &.header-breakfast {
     background-image: url('/images/icons/header/breakfast.svg');
