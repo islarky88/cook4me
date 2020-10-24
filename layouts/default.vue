@@ -1,50 +1,25 @@
 <template>
-  <v-app dark>
-    <!-- <v-navigation-drawer v-model="drawer" app>
-      <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+  <v-app>
+    <v-app-bar id="header" fixed app color="#D8D6CB">
+      <v-container class="d-flex justify-space-between align-center">
+        <div class="header-logo"></div>
+        <div class="menu-items d-flex align-center">
+          <div>Explore</div>
+          <div>Meal Menu <v-icon> mdi-chevron-down </v-icon></div>
+          <div>Find a Chef</div>
+          <div>Bookings</div>
+          <div>
+            <v-avatar size="44">
+              <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+            </v-avatar>
+            <v-icon> mdi-chevron-down </v-icon>
+          </div>
+        </div>
+      </v-container>
     </v-app-bar>
     <v-main>
       <nuxt />
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -109,6 +84,32 @@ export default {
     text-align: center;
     letter-spacing: 0.0357143em;
     text-transform: uppercase;
+  }
+}
+
+#header {
+  height: 108px !important;
+  .v-toolbar__content {
+    height: 100% !important;
+  }
+  .header-logo {
+    background-image: url('/images/icons/header-logo.svg');
+    width: 88px;
+    height: 66px;
+  }
+
+  .menu-items {
+    & > div {
+      margin-left: 40px;
+      // font-family: 'Cera Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+
+      color: #000000;
+    }
   }
 }
 
