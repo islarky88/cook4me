@@ -7,9 +7,17 @@
             <div class="txt-header">Need someone to cook for you?</div>
             <div class="txt-header">Want to learn the secret cusinies?</div>
             <v-card class="pa-5 mt-5">
-              <div class="mb-3">Enter your postcode to find local Chefs</div>
+              <div class="mb-3 search-bar-header">Enter your postcode to find local Chefs</div>
               <div class="d-flex align-center">
-                <v-text-field v-model="first" class="pr-5" label="First Name" placeholder="e.g. EC4R 3TE" solo hide-details></v-text-field>
+                <v-text-field
+                  v-model="first"
+                  class="pr-5"
+                  placeholder="e.g. EC4R 3TE"
+                  background-color="#F7F7F7"
+                  hide-details
+                  solo
+                  flat
+                ></v-text-field>
                 <v-btn color="primary" href="#">Search</v-btn>
               </div>
             </v-card>
@@ -21,7 +29,7 @@
       <div v-for="(item, i) in menuCategories" :key="i">
         <div class="d-flex justify-space-between">
           <h1 :class="'header-' + item.class">{{ item.title }}</h1>
-          <v-btn color="primary" href="/fooRoute">View More</v-btn>
+          <v-btn color="primary" href="#">View More</v-btn>
         </div>
         <v-row>
           <v-col v-for="j in 3" :key="j">

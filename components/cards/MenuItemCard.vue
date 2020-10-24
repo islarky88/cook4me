@@ -1,44 +1,22 @@
 <template>
   <div>
-    <v-card :loading="loading" class="mx-auto my-12">
-      <template slot="progress">
-        <v-progress-linear color="deep-purple" height="10" indeterminate></v-progress-linear>
-      </template>
-
+    <v-card class="mx-auto my-12">
       <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png"></v-img>
+      <div class="d-flex justify-space-between align-center mx-4 mt-3">
+        <div>
+          <div class="mb-1">Cafe Badilico</div>
+          <div>
+            <v-avatar color="primary" rounded size="24"> <img src="https://placeimg.com/24/24/any" alt="Allan Donald" /></v-avatar>
+            <span>Allan Donald</span>
+          </div>
+        </div>
+        <v-img max-height="50" max-width="50" contain src="/images/icons/header/breakfast.svg"></v-img>
+      </div>
 
-      <v-card-title>Cafe Badilico</v-card-title>
-
-      <v-card-text>
-        <v-row align="center" class="mx-0">
-          <v-rating :value="4.5" color="amber" dense half-increments readonly size="14"></v-rating>
-
-          <div class="grey--text ml-4">4.5 (413)</div>
-        </v-row>
-
-        <div class="my-4 subtitle-1">$ • Italian, Cafe</div>
-
-        <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
-      </v-card-text>
-
-      <v-divider class="mx-4"></v-divider>
-
-      <v-card-title>Tonight's availability</v-card-title>
-
-      <v-card-text>
-        <v-chip-group v-model="selection" active-class="deep-purple accent-4 white--text" column>
-          <v-chip>5:30PM</v-chip>
-
-          <v-chip>7:30PM</v-chip>
-
-          <v-chip>8:00PM</v-chip>
-
-          <v-chip>9:00PM</v-chip>
-        </v-chip-group>
-      </v-card-text>
+      <v-card-text> Greyhound divisively hello coldly wonderfully marginally far upon... </v-card-text>
 
       <v-card-actions>
-        <v-btn color="deep-purple lighten-2" text @click="reserve"> Reserve </v-btn>
+        <v-btn color="primary" text href="#"> View Info </v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -46,17 +24,10 @@
 
 <script>
 export default {
-  data: () => ({
-    loading: false,
-    selection: 1,
-  }),
-
-  methods: {
-    reserve() {
-      this.loading = true;
-
-      setTimeout(() => (this.loading = false), 2000);
-    },
+  data() {
+    return {};
   },
+
+  methods: {},
 };
 </script>
