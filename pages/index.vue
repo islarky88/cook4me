@@ -3,7 +3,7 @@
     <v-parallax src="/images/bg-home.png">
       <v-container>
         <v-row align="center" justify="start">
-          <v-col cols="6">
+          <v-col cols="8">
             <div class="txt-header">Need someone to cook for you?</div>
             <div class="txt-header">Want to learn the secret cusinies?</div>
             <v-card class="pa-5 mt-5">
