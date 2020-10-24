@@ -94,7 +94,10 @@ export default {
   text-transform: uppercase;
   color: #ffffff;
   height: 32px !important;
-  padding: 0 25px !important;
+
+  &:not(.v-btn--flat) {
+    padding: 0 25px !important;
+  }
 
   &.postal-search {
     padding: 21px 66px !important;
