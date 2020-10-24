@@ -94,9 +94,10 @@ export default {
   text-transform: uppercase;
   color: #ffffff;
   height: 32px !important;
+  padding: 0 25px !important;
 
   &.postal-search {
-    padding: 21px 50px !important;
+    padding: 21px 66px !important;
     // font-family: 'Cera Pro';
     font-style: normal;
     font-weight: 500;

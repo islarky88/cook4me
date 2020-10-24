@@ -10,7 +10,7 @@
         </v-row>
         <v-row align="center" justify="start">
           <v-col cols="6">
-            <v-card class="pa-5 mt-5 rounded-0">
+            <v-card class="py-5 px-8 mt-5 rounded-0">
               <div class="mb-3 search-bar-header">Enter your postcode to find local Chefs</div>
               <div class="d-flex align-center">
                 <v-text-field
